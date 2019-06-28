@@ -1,4 +1,4 @@
-package br.fapi.poo.banco.Util;
+package br.fapi.poo.Util;
 
 import java.util.Scanner;
 

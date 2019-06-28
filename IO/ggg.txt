@@ -1,0 +1,10 @@
+Nome: #ggg#
+dificuldade: #facil#
+palavra: #massa#
+resultado: #inicio#
+tentativa: #6#
+palpite: #o#
+interrupcoes: #6#
+dataHoraInicio: #28/06/2019|1:23#
+dataHoraFim: #28/06/2019|1:23#
+

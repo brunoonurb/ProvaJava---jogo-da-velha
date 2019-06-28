@@ -48,7 +48,7 @@ public class ControlerFile {
                 fwriter.write(texto.dataHoraInicio());
                 fwriter.write(texto.dataHoraFim());
 
-                throw new IOException();
+
             }
 
         } catch (IOException e) {
