@@ -1,0 +1,10 @@
+Nome: #bruno#
+dificuldade: #facil#
+palavra: #massa#
+resultado: #inicio#
+tentativa: #10#
+palpite: #o#
+interrupcoes: #10#
+dataHoraInicio: #28/06/2019|1:23#
+dataHoraFim: #28/06/2019|1:23#
+
