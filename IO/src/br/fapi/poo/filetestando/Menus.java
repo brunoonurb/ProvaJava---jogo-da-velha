@@ -1,7 +1,9 @@
 package br.fapi.poo.filetestando;
 
+import br.fapi.poo.Util.Leitura;
+
 public class Menus {
-    br.fapi.poo.banco.Util.Leitura ler = new br.fapi.poo.banco.Util.Leitura();
+    Leitura ler = new Leitura();
 
     public int menuPricipal(){
         System.out.println("|1| atualizar File");

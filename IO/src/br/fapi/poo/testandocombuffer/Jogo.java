@@ -3,15 +3,16 @@ package br.fapi.poo.testandocombuffer;
 import java.io.File;
 import java.io.StringReader;
 
-public class Jogador {
+public class Jogo {
+
     File fileJogador ;
     String dificuldade;
     String nome;
     String palavra;
     String resultado;
-    String tentativa;
     String palpite;
-    String interrupcoes;
+    int tentativa = 0;
+    int interrupcoes = 0;
     String dataHoraInicio;
-    String getDataHorafim;
+    String dataHorafim;
 }

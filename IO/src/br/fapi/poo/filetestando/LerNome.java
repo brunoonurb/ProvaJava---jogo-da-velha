@@ -1,5 +1,7 @@
 package br.fapi.poo.filetestando;
-import br.fapi.poo.banco.Util.Leitura;
+
+
+import br.fapi.poo.Util.Leitura;
 
 public class LerNome {
     Leitura ler = new Leitura();

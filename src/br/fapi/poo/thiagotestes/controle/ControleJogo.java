@@ -19,6 +19,6 @@ public class ControleJogo {
 	
 	public void receberNomeJogador() {
 		Jogador.getInstancia().setNome(Leitura.getInstancia().lerString("Digite o nome do jogador:"));
-		Menu.getInstancia().
+		//Menu.getInstancia().
 	}
 }
