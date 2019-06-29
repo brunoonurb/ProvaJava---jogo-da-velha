@@ -1,10 +1,10 @@
-*|nome|: #joao#
-|dificuldade|: #facil#
-|palavra|: #null#
-|resultado|: #null#
-|palpite|: #null#
-|tentativa|: #0#
-|interrupcoes|: #0#
-|dataHoraInicio|: #29/06/2019 00:32:02#
-|dataHorafim #29/06/2019 00:32:02#*
+&nome& #joao#
+&dificuldade& #facil#
+&palavra& #null#
+&resultado& #null#
+&palpite& #null#
+&tentativa& #0#
+&interrupcoes& #0#
+&dataHoraInicio& #29/06/2019 00:32:02#
+&dataHorafim& #29/06/2019 00:32:02#
 

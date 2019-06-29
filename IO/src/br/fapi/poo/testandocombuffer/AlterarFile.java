@@ -18,23 +18,23 @@ public class AlterarFile {
     public void inserirFile(Jogo jogo){
         try(BufferedWriter meuBf = new BufferedWriter(new FileWriter(jogo.fileJogador))){
 
-         meuBf.write("*|nome|: #" + jogo.nome + "#");
-         meuBf.newLine();
-            meuBf.write("|dificuldade|: #" + jogo.dificuldade + "#");
+            meuBf.write("&nome& #" + jogo.nome + "#");
             meuBf.newLine();
-            meuBf.write("|palavra|: #" + jogo.palavra + "#");
+            meuBf.write("&dificuldade& #" + jogo.dificuldade + "#");
             meuBf.newLine();
-            meuBf.write("|resultado|: #" + jogo.resultado + "#");
+            meuBf.write("&palavra& #" + jogo.palavra + "#");
             meuBf.newLine();
-            meuBf.write("|palpite|: #" + jogo.palpite + "#");
+            meuBf.write("&resultado& #" + jogo.resultado + "#");
             meuBf.newLine();
-            meuBf.write("|tentativa|: #" + jogo.tentativa + "#");
+            meuBf.write("&palpite& #" + jogo.palpite + "#");
             meuBf.newLine();
-            meuBf.write("|interrupcoes|: #" + jogo.interrupcoes + "#");
+            meuBf.write("&tentativa& #" + jogo.tentativa + "#");
             meuBf.newLine();
-            meuBf.write("|dataHoraInicio|: #" + jogo.dataHoraInicio + "#");
+            meuBf.write("&interrupcoes& #" + jogo.interrupcoes + "#");
             meuBf.newLine();
-            meuBf.write("|dataHorafim #" + jogo.dataHorafim + "#*");
+            meuBf.write("&dataHoraInicio& #" + jogo.dataHoraInicio + "#");
+            meuBf.newLine();
+            meuBf.write("&dataHorafim& #" + jogo.dataHorafim + "#");
             meuBf.newLine();
             meuBf.newLine();
             meuBf.flush();
@@ -50,25 +50,31 @@ public class AlterarFile {
 
 
             String minhaSt ;
+            String[] palavra;
+            String[] palavra1;
+            String nomes = "";
+            String contem = "";
 
             while ((minhaSt = meuBr.readLine()) != null){
-                System.out.println("oi"+minhaSt);
+
+                    palavra =  minhaSt.split("#");
+                for(int i = 0;i < palavra.length;i++){
+                  //  System.out.println("Campo "+i+": "+palavra[i]);
+                    nomes = palavra[i];
+                }
+
+                palavra1 =  minhaSt.split("&");
+                for(int i = 0;i < palavra1.length;i++){
+                 //   System.out.println("Conteudo"+i+": "+palavra1[i]);
+                    contem = palavra1[i];
+                }
+                System.out.println("nomes ->" + nomes);
+                System.out.println("contem ->" + contem);
+
+
+
 
             }
-
-            String[] user = s.split(";");
-
-            //Criamos um objeto User e setamos em seus atributos
-            //as posições correspondentes do array
-            User u = new User();
-            u.setId(Integer.valueOf(user[0]));
-            u.setNome(user[1]);
-            u.setObservacao(user[2]);
-
-            //exibe o conteúdo do objeto u
-            System.out.println(u.toString())
-
-
 
             //   for (char c :minhaSt){}
           /*  System.out.println("=================================");
@@ -77,17 +83,11 @@ public class AlterarFile {
             System.out.println("LISTANDO O FILE \n");
             for (char c :texto){
                 System.out.print(c);*/
-            }
 
-
-
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
     }
 
