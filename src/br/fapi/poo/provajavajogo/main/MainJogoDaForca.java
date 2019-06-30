@@ -10,5 +10,4 @@ public class MainJogoDaForca {
 		ControleGeral.getInstancia().inicio();
 		//ControleJogo.getInstancia().inserirPalavra();
 	}
-
 }

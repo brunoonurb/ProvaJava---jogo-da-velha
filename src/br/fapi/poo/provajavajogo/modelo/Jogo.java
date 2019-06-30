@@ -16,6 +16,11 @@ public class Jogo {
 		}
 		return instancia;
 	}
+	
+	 public void esvaziarMemoria()
+	  {
+	    instancia = null;
+	  }
 	private File myFile;
 	private String estadoDoJogo;//PAUSADO , ABANDONADO
 	private String nomeJogador;

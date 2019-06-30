@@ -34,15 +34,14 @@ public class ControleJogo {
 		System.out.println("A palavra a ser advinhada é: " + Jogo.getInstancia().getPalavra());
 		do {
 			cont2 = 0;
-			char hifen='-',espaco=' ';
+			// char hifen='-',espaco=' ';
 			System.out.println(
 					"======================================================================================================");
 			System.out.println("\n|JOGADOR|     : " + Jogo.getInstancia().getNomeJogador());
 			System.out.println("|DIFICULDADE| : " + Jogo.getInstancia().getDificuldade());
 			System.out.println("|TENTATIVAS | : " + Jogo.getInstancia().getTentativasUsadas());
 			System.out.println("|Nº CHANCES | : " + Jogo.getInstancia().getTentativasRestantes());
-			System.out
-					.println("|LETRAS DIG|  : " + Arrays.toString(Jogo.getInstancia().getLetrasPalpites().toArray()));
+			System.out.println("|LETRAS DIG|  : " + Arrays.toString(Jogo.getInstancia().getLetrasPalpites().toArray()));
 			System.out.println("|LETRAS ERR|  : " + Arrays.toString(Jogo.getInstancia().getLetrasErradas().toArray()));
 			System.out.println("\nDIGITE 0 PARA PAUSAR E VOLTAR PARA O MENU PRINCIPAL");
 			System.out.print("\nPalavra a ser adivinhada: \t");
@@ -55,9 +54,10 @@ public class ControleJogo {
 						cont = 1;
 					}
 				}
-				if ((Character.toUpperCase(Jogo.getInstancia().getPalavra().charAt(i))==hifen)||(Character.toUpperCase(Jogo.getInstancia().getPalavra().charAt(i))==espaco)) {
-					cont=1;
-					}
+				if ((Character.toUpperCase(Jogo.getInstancia().getPalavra().charAt(i)) == '-')
+						|| (Character.toUpperCase(Jogo.getInstancia().getPalavra().charAt(i)) == ' ')) {
+					cont = 1;
+				}
 				if (cont == 1) {
 					cont2++;
 					System.out.print(" " + Jogo.getInstancia().getPalavra().charAt(i) + "  ");
@@ -81,18 +81,20 @@ public class ControleJogo {
 				// BRUNO: Atualizar o jogo para o arquivo
 				Menu.getInstancia().menuPrincipal();
 			}
-			
+
 			if (cont2 == Jogo.getInstancia().getPalavra().length()) {
 				System.out.println("\nVoce ganhou o jogo!");
 				System.out.println("Pressione ENTER");
 				Leitura.getInstancia().lerString();
 				Leitura.getInstancia().lerString();
+				// BRUNO: Atualizar o jogo para o arquivo: data fim, vitoria,jogadas,etc
 			}
 
 			do {
 				cont = 0;
 				palpite = Leitura.getInstancia().lerChar("Digite uma letra: ");
 				palpite = Character.toUpperCase(palpite);
+				// boolean verificacao = palpite.isLetter(0);
 				for (int i = 0; i < Jogo.getInstancia().getLetrasPalpites().size(); i++) {
 					if (palpite == Jogo.getInstancia().getLetrasPalpites().get(i)) {
 						cont = 1;
@@ -112,13 +114,14 @@ public class ControleJogo {
 			}
 			Jogo.getInstancia().getLetrasPalpites().add(palpite);
 		} while (palpite != 0);
-		// THIAGO: fazer um try catch
+		// THIAGO: fazer try catch
 		Jogo.getInstancia().setEstadoDoJogo("PAUSADO");
 		Jogo.getInstancia().setInterrupcoes(1);
-		// BRUNO: mandar a data fim para o JOGO
+		// BRUNO: mandar a data fim para o JOGO ou somente quando der vitoria ou
+		// derrota?
 		// BRUNO: Atualizar o jogo para o arquivo
 		Menu.getInstancia().menuPrincipal();
-		System.out.println("acabou o while");
+
 	}
 
 	public void inserirPalavra() {
