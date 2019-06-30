@@ -31,7 +31,7 @@ public class ControleJogo {
 		int cont;
 		int cont2;
 		Character palpite = null;
-		System.out.println("A palavra a ser advinhada é: " + Jogo.getInstancia().getPalavra());
+		System.out.println("A palavra a ser advinhada ï¿½: " + Jogo.getInstancia().getPalavra());
 		do {
 			cont2 = 0;
 			// char hifen='-',espaco=' ';
@@ -40,7 +40,7 @@ public class ControleJogo {
 			System.out.println("\n|JOGADOR|     : " + Jogo.getInstancia().getNomeJogador());
 			System.out.println("|DIFICULDADE| : " + Jogo.getInstancia().getDificuldade());
 			System.out.println("|TENTATIVAS | : " + Jogo.getInstancia().getTentativasUsadas());
-			System.out.println("|Nº CHANCES | : " + Jogo.getInstancia().getTentativasRestantes());
+			System.out.println("|Nï¿½ CHANCES | : " + Jogo.getInstancia().getTentativasRestantes());
 			System.out.println("|LETRAS DIG|  : " + Arrays.toString(Jogo.getInstancia().getLetrasPalpites().toArray()));
 			System.out.println("|LETRAS ERR|  : " + Arrays.toString(Jogo.getInstancia().getLetrasErradas().toArray()));
 			System.out.println("\nDIGITE 0 PARA PAUSAR E VOLTAR PARA O MENU PRINCIPAL");
@@ -88,6 +88,7 @@ public class ControleJogo {
 				Leitura.getInstancia().lerString();
 				Leitura.getInstancia().lerString();
 				// BRUNO: Atualizar o jogo para o arquivo: data fim, vitoria,jogadas,etc
+				(new AlterarFile()).criarArquivo();
 			}
 
 			do {
@@ -113,6 +114,7 @@ public class ControleJogo {
 				Jogo.getInstancia().getLetrasErradas().add(palpite);
 			}
 			Jogo.getInstancia().getLetrasPalpites().add(palpite);
+			(new AlterarFile()).criarArquivo();
 		} while (palpite != 0);
 		// THIAGO: fazer try catch
 		Jogo.getInstancia().setEstadoDoJogo("PAUSADO");
@@ -120,6 +122,7 @@ public class ControleJogo {
 		// BRUNO: mandar a data fim para o JOGO ou somente quando der vitoria ou
 		// derrota?
 		// BRUNO: Atualizar o jogo para o arquivo
+		(new AlterarFile()).criarArquivo();
 		Menu.getInstancia().menuPrincipal();
 
 	}
@@ -136,6 +139,7 @@ public class ControleJogo {
 		// BRUNO: setar data e hora no jogo
 		// BRUNO:Criar novo arquivo que tenha: nome jogador, nivel, data e hora de
 		// inicio
+		(new AlterarFile()).criarArquivo();
 	}
 
 	public void continuarAbandonarJogo() {
@@ -148,8 +152,10 @@ public class ControleJogo {
 		case "S":
 			// BRUNO: Carrega arquivo e copiar para as variaveis
 			// comecarJogo(); depois disso descomenta para testar
+			(new AlterarFile()).coletarDados();
 			break;
 		case "N":
+			Jogo.getInstancia().getMyFile().delete();
 			criarNovoJogo();
 			inserirPalavra();
 			break;

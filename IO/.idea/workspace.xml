@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0edf3fd0-cd60-4bed-a7f9-9ac4ab66d5f9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/joaofacil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/joaofacil.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/fapi/poo/testandocombuffer/AlterarFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/fapi/poo/testandocombuffer/AlterarFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProvaJava/br/fapi/poo/thiagotestes/controle/ControleGeral.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProvaJava/br/fapi/poo/thiagotestes/controle/ControleJogo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProvaJava/br/fapi/poo/thiagotestes/main/MainJogoDaForca.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProvaJava/br/fapi/poo/thiagotestes/modelo/Jogador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProvaJava/br/fapi/poo/thiagotestes/util/Leitura.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/ProvaJava/br/fapi/poo/thiagotestes/util/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/br/fapi/poo/provajavajogo/controle/ControleJogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/br/fapi/poo/provajavajogo/controle/ControleJogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/br/fapi/poo/provajavajogo/modelo/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/br/fapi/poo/provajavajogo/modelo/Jogo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +40,7 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#2531#2532#0" expanded="true" />
                 <element signature="e#2591#2592#0" expanded="true" />
-                <marker date="1561774283218" expanded="true" signature="2095:2335" ph="..." />
+                <marker date="1561901376750" expanded="true" signature="2095:2335" ph="..." />
               </folding>
             </state>
           </provider>
@@ -41,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/fapi/poo/testandocombuffer/ControlerJogada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="476">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -50,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/br/fapi/poo/testandocombuffer/AlterarFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+            <state relative-caret-position="908">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,6 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -149,12 +158,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561785488287" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IO/src/br/fapi/poo/java/io/testfile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ProvaJ" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -269,8 +277,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
       <window_info id="Structure" order="1" weight="0.24962178" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -396,8 +405,15 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2531#2532#0" expanded="true" />
             <element signature="e#2591#2592#0" expanded="true" />
-            <marker date="1561774283218" expanded="true" signature="2095:2335" ph="..." />
+            <marker date="1561901376750" expanded="true" signature="2095:2335" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/fapi/poo/testandocombuffer/ControlerJogada.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -408,17 +424,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/fapi/poo/testandocombuffer/ControlerJogada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/fapi/poo/testandocombuffer/AlterarFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+        <state relative-caret-position="908">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

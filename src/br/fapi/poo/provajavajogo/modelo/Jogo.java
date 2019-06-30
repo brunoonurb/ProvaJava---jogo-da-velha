@@ -34,8 +34,8 @@ public class Jogo {
 	private ArrayList<Character> letrasPalpites = new ArrayList<Character>();
 	private ArrayList<Character> letrasErradas = new ArrayList<Character>();
 	private int interrupcoes;
-	private Date dataInicio;
-	private Date dataFim;
+	private String dataInicio;
+	private String dataFim;
 
 	public File getMyFile() {
 		return myFile;
@@ -141,19 +141,19 @@ public class Jogo {
 		this.interrupcoes += interrupcoes;
 	}
 
-	public Date getDataInicio() {
+	public String getDataInicio() {
 		return dataInicio;
 	}
 
-	public void setDataInicio(Date dataInicio) {
+	public void setDataInicio(String dataInicio) {
 		this.dataInicio = dataInicio;
 	}
 
-	public Date getDataFim() {
+	public String getDataFim() {
 		return dataFim;
 	}
 
-	public void setDataFim(Date dataFim) {
+	public void setDataFim(String dataFim) {
 		this.dataFim = dataFim;
 	}
 
