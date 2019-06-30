@@ -1,0 +1,12 @@
+nome#m
+palavra#bruno
+dificuldade#Facil
+resultado#PAUSADO
+letrasPalpites#BGHUNY
+letrasErradas#GHY
+limiteTentativas#7
+TentativasUsadas#3
+nChances#4
+interrupcoes#2
+dataInicio#30/06/2019 19:55:47
+dataFim#30/06/2019 19:56:59

@@ -61,7 +61,7 @@ public class Menu {
 	}
 
 	public void menuPrincipal() {
-		Jogo.getInstancia().esvaziarMemoria();
+		Jogo.getInstancia().esvaziarMemoria();//Por enquanto esta aqui, mas vou colocar no lugar certo 
 
 		System.out.println("|1| - Jogar");
 		System.out.println("|2| - Gerar relatorios");

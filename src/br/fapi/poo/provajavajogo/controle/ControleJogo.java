@@ -40,11 +40,12 @@ public class ControleJogo {
 			System.out.println("\n|JOGADOR|     : " + Jogo.getInstancia().getNomeJogador());
 			System.out.println("|DIFICULDADE| : " + Jogo.getInstancia().getDificuldade());
 			System.out.println("|TENTATIVAS | : " + Jogo.getInstancia().getTentativasUsadas());
-			System.out.println("|Nï¿½ CHANCES | : " + Jogo.getInstancia().getTentativasRestantes());
+			System.out.println("|N° CHANCES | : " + Jogo.getInstancia().getTentativasRestantes());
 			System.out.println("|LETRAS DIG|  : " + Arrays.toString(Jogo.getInstancia().getLetrasPalpites().toArray()));
 			System.out.println("|LETRAS ERR|  : " + Arrays.toString(Jogo.getInstancia().getLetrasErradas().toArray()));
 			System.out.println("\nDIGITE 0 PARA PAUSAR E VOLTAR PARA O MENU PRINCIPAL");
 			System.out.print("\nPalavra a ser adivinhada: \t");
+			(new AlterarFile()).criarArquivo();
 
 			for (int i = 0; i < Jogo.getInstancia().getPalavra().length(); i++) {
 				cont = 0;
@@ -89,7 +90,6 @@ public class ControleJogo {
 				System.out.println("Pressione ENTER");
 				Leitura.getInstancia().lerString();
 				Leitura.getInstancia().lerString();
-				// BRUNO: Atualizar o jogo para o arquivo: data fim, vitoria,jogadas,etc
 				Jogo.getInstancia().setEstadoDoJogo("Vitoria");
 				(new AlterarFile()).AdicionarRelatorioFinal();
 				Menu.getInstancia().menuPrincipal();
@@ -99,7 +99,6 @@ public class ControleJogo {
 				cont = 0;
 				palpite = Leitura.getInstancia().lerChar("Digite uma letra: ");
 				palpite = Character.toUpperCase(palpite);
-				// boolean verificacao = palpite.isLetter(0);
 				for (int i = 0; i < Jogo.getInstancia().getLetrasPalpites().size(); i++) {
 					if (palpite == Jogo.getInstancia().getLetrasPalpites().get(i)) {
 						cont = 1;
@@ -113,19 +112,17 @@ public class ControleJogo {
 					cont = 1;
 				}
 			}
-			if (cont != 1) {
+			if ((cont != 1) && (palpite != '0')) {
 				Jogo.getInstancia().setTentativasUsadas(1);
 				Jogo.getInstancia().getLetrasErradas().add(palpite);
 			}
-			Jogo.getInstancia().getLetrasPalpites().add(palpite);
+			if(palpite != '0') {
+				Jogo.getInstancia().getLetrasPalpites().add(palpite);
+			}
 			(new AlterarFile()).criarArquivo();
 		} while (palpite != '0');
-		// THIAGO: fazer try catch
 		Jogo.getInstancia().setEstadoDoJogo("PAUSADO");
 		Jogo.getInstancia().setInterrupcoes(1);
-		// BRUNO: mandar a data fim para o JOGO ou somente quando der vitoria ou
-		// derrota?
-		// BRUNO: Atualizar o jogo para o arquivo
 		(new AlterarFile()).criarArquivo();
 		Menu.getInstancia().menuPrincipal();
 
@@ -134,7 +131,7 @@ public class ControleJogo {
 	public void inserirPalavra() {
 		String palavra = Leitura.getInstancia().lerString("Digite a palavra a ser adivinhada: ");
 		Jogo.getInstancia().setPalavra(palavra);
-		// BRUNO:Colocar ou nao aqui ja a palavra
+		// BRUNO:Colocar a palavra dentro do arquivo aqui ja
 		comecarJogo();
 	}
 

@@ -8,3 +8,14 @@ limiteTentativas#7
 interrupcoes#0
 dataInicio#30/06/2019 17:16:23
 dataFim#30/06/2019 17:16:55
+nome#ju
+palavra#juju
+dificuldade#Facil
+resultado#Vitoria
+letrasPalpites#[J, U]
+letrasErradas#[J, U]
+limiteTentativas#7
+interrupcoes#2
+dataInicio#30/06/2019 19:14:08
+dataFim#30/06/2019 19:18:53
+
