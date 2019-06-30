@@ -1,0 +1,10 @@
+nome#bru
+palavra#horario
+dificuldade#Medio
+resultado#null
+letrasPalpites#[D, S, O, R, A, H, J, T, Q]
+letrasErradas#[D, S, O, R, A, H, J, T, Q]
+limiteTentativas#5
+interrupcoes#0
+dataInicio#30/06/2019 17:22:48
+dataFim#30/06/2019 17:23:19

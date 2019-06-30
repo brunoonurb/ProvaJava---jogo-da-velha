@@ -79,6 +79,8 @@ public class ControleJogo {
 				Leitura.getInstancia().lerString();
 				Leitura.getInstancia().lerString();
 				// BRUNO: Atualizar o jogo para o arquivo
+				Jogo.getInstancia().setEstadoDoJogo("Derrota");
+				(new AlterarFile()).AdicionarRelatorioFinal();
 				Menu.getInstancia().menuPrincipal();
 			}
 
@@ -88,7 +90,9 @@ public class ControleJogo {
 				Leitura.getInstancia().lerString();
 				Leitura.getInstancia().lerString();
 				// BRUNO: Atualizar o jogo para o arquivo: data fim, vitoria,jogadas,etc
-				(new AlterarFile()).criarArquivo();
+				Jogo.getInstancia().setEstadoDoJogo("Vitoria");
+				(new AlterarFile()).AdicionarRelatorioFinal();
+				Menu.getInstancia().menuPrincipal();
 			}
 
 			do {
@@ -115,7 +119,7 @@ public class ControleJogo {
 			}
 			Jogo.getInstancia().getLetrasPalpites().add(palpite);
 			(new AlterarFile()).criarArquivo();
-		} while (palpite != 0);
+		} while (palpite != '0');
 		// THIAGO: fazer try catch
 		Jogo.getInstancia().setEstadoDoJogo("PAUSADO");
 		Jogo.getInstancia().setInterrupcoes(1);

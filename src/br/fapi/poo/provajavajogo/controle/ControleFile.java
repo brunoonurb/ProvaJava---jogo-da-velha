@@ -18,13 +18,15 @@ public class ControleFile {
 	}
 	
 	public void verificarExistenciaDeJogo(String arquivoNome) {
-		System.out.println("Nome do arquivo é: " + arquivoNome);
-		Jogo.getInstancia().setMyFile(new File(arquivoNome+"txt"));
+		System.out.println("Nome do arquivo ï¿½: " + arquivoNome);
+		File dir = new File("JogoIniciado");
+		dir.mkdir();
+		Jogo.getInstancia().setMyFile(new File(dir,arquivoNome+".txt"));
 		if (Jogo.getInstancia().getMyFile().exists()) {
 			System.out.println("Arquivo existe");
 			ControleJogo.getInstancia().continuarAbandonarJogo();
 		} else {
-			System.out.println("Arquivo não existe \n");
+			System.out.println("Arquivo nï¿½o existe \n");
 			ControleJogo.getInstancia().criarNovoJogo();
 			ControleJogo.getInstancia().inserirPalavra();
 		}

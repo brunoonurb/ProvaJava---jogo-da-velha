@@ -1,0 +1,33 @@
+nome#bruno
+palavra#banana
+dificuldade#Facil
+resultado#null
+letrasPalpites#[B, F, H, A, N]
+letrasErradas#[B, F, H, A, N]
+limiteTentativas#7
+interrupcoes#0
+dataInicio#30/06/2019 17:16:23
+dataFim#30/06/2019 17:16:55
+
+nome#bru
+palavra#horario
+dificuldade#Medio
+resultado#Derota
+letrasPalpites#[D, S, O, R, A, H, J, T, Q]
+letrasErradas#[D, S, O, R, A, H, J, T, Q]
+limiteTentativas#5
+interrupcoes#0
+dataInicio#30/06/2019 17:22:48
+dataFim#30/06/2019 17:23:20
+
+nome#morre
+palavra#nao
+dificuldade#Medio
+resultado#Derrota
+letrasPalpites#[N, F, G, Y, U, R]
+letrasErradas#[N, F, G, Y, U, R]
+limiteTentativas#5
+interrupcoes#0
+dataInicio#30/06/2019 17:26:43
+dataFim#30/06/2019 17:27:04
+

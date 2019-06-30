@@ -1,0 +1,10 @@
+nome#bruno
+palavra#banana
+dificuldade#Dificil
+resultado#null
+letrasPalpites#[B, A, R, T, 0]
+letrasErradas#[B, A, R, T, 0]
+limiteTentativas#3
+interrupcoes#1
+dataInicio#30/06/2019 16:14:55
+dataFim#30/06/2019 16:15:24

@@ -1,0 +1,10 @@
+nome#morre
+palavra#nao
+dificuldade#Medio
+resultado#null
+letrasPalpites#[N, F, G, Y, U, R]
+letrasErradas#[N, F, G, Y, U, R]
+limiteTentativas#5
+interrupcoes#0
+dataInicio#30/06/2019 17:26:43
+dataFim#30/06/2019 17:27:02

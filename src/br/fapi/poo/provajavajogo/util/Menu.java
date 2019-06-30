@@ -2,6 +2,7 @@ package br.fapi.poo.provajavajogo.util;
 
 import java.util.InputMismatchException;
 
+import br.fapi.poo.provajavajogo.controle.AlterarFile;
 import br.fapi.poo.provajavajogo.controle.ControleFile;
 import br.fapi.poo.provajavajogo.controle.ControleGeral;
 import br.fapi.poo.provajavajogo.controle.ControleJogo;
@@ -45,13 +46,13 @@ public class Menu {
 			menuPrincipal();
 			break;
 		case 1:
-			// Alex
+			(new AlterarFile()).RelatorioFinal("Geral");
 			break;
 		case 2:
-			// Alex
+			(new AlterarFile()).RelatorioFinal("Vitoria");
 			break;
 		case 3:
-			// Alex
+			(new AlterarFile()).RelatorioFinal("Derrotas");
 			break;
 		default:
 			menuRelatorio();
@@ -108,14 +109,14 @@ public class Menu {
 		case 1:
 			Nivel nivelFacil = new NivelFacil();
 			nivelFacil.aplicarDificuldade();
-			System.out.println("O nivel escolhido é: " + nivelFacil.getNivel());
+			System.out.println("O nivel escolhido ï¿½: " + nivelFacil.getNivel());
 			ControleFile.getInstancia()
 					.verificarExistenciaDeJogo(Jogo.getInstancia().getNomeJogador() + nivelFacil.getNivel());
 			break;
 		case 2:
 			Nivel nivelMedio = new NivelMedio();
 			nivelMedio.aplicarDificuldade();
-			System.out.println("O nivel escolhido é: " + nivelMedio.getNivel());
+			System.out.println("O nivel escolhido ï¿½: " + nivelMedio.getNivel());
 			ControleFile.getInstancia()
 					.verificarExistenciaDeJogo(Jogo.getInstancia().getNomeJogador() + nivelMedio.getNivel());
 
@@ -123,7 +124,7 @@ public class Menu {
 		case 3:
 			Nivel nivelDificil = new NivelDificil();
 			nivelDificil.aplicarDificuldade();
-			System.out.println("O nivel escolhido é: " + nivelDificil.getNivel());
+			System.out.println("O nivel escolhido ï¿½: " + nivelDificil.getNivel());
 			ControleFile.getInstancia()
 					.verificarExistenciaDeJogo(Jogo.getInstancia().getNomeJogador() + nivelDificil.getNivel());
 			break;
