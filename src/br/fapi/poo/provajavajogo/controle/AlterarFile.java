@@ -7,6 +7,7 @@ import br.fapi.poo.provajavajogo.util.Leitura;
 import javax.swing.*;
 import java.io.*;
 import java.lang.reflect.Array;
+import java.nio.file.Path;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -113,14 +114,6 @@ public class AlterarFile {
                 }
                 
             }
-            System.out.println(Jogo.getInstancia().getPalavra());
-            System.out.println(Jogo.getInstancia().getDificuldade());
-            System.out.println(Jogo.getInstancia().getNomeJogador());
-            System.out.println(Jogo.getInstancia().getLetrasPalpites());
-            System.out.println(Jogo.getInstancia().getLetrasErradas());
-            System.out.println(Jogo.getInstancia().getLimiteTentativas());
-            Leitura.getInstancia().lerString();
-            Leitura.getInstancia().lerString();
             ControleJogo.getInstancia().comecarJogo();
 
         } catch (FileNotFoundException e) {
@@ -159,17 +152,19 @@ public class AlterarFile {
         dir.mkdir();
 
         if (relatorio.equals("Vitoria")){
-
+        	
+        	Jogo.getInstancia().getMyFile().delete();
+        	
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioVitorias.txt"));
             listarRelarios();
 
         }else if (relatorio.equals("Derrota")){
-
+        	Jogo.getInstancia().getMyFile().delete();
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioDerrotas.txt"));
             listarRelarios();
 
         } else{
-
+        	
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioGeral.txt"));
             listarRelarios();
         }
@@ -194,15 +189,20 @@ public class AlterarFile {
             meuBf.newLine();
             meuBf.write("letrasPalpites#" + Jogo.getInstancia().getLetrasPalpites().toString());
             meuBf.newLine();
-            meuBf.write("letrasErradas#" + Jogo.getInstancia().getLetrasPalpites().toString());
+            meuBf.write("letrasErradas#" + Jogo.getInstancia().getLetrasErradas().toString());
             meuBf.newLine();
             meuBf.write("limiteTentativas#" + Jogo.getInstancia().getLimiteTentativas());
             meuBf.newLine();
             meuBf.write("interrupcoes#" + Jogo.getInstancia().getInterrupcoes());
             meuBf.newLine();
+            meuBf.write("TentativasUsadas#" + Jogo.getInstancia().getTentativasUsadas());
+            meuBf.newLine();
+            meuBf.write("nChances#" + Jogo.getInstancia().getTentativasRestantes());
+            meuBf.newLine();
             meuBf.write("dataInicio#" + Jogo.getInstancia().getDataInicio());
             meuBf.newLine();
             meuBf.write("dataFim#" + Jogo.getInstancia().getDataFim());
+            meuBf.write("----------------------------------");
             meuBf.newLine();
             meuBf.newLine();
             meuBf.flush();
@@ -231,6 +231,49 @@ public class AlterarFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    
+    public void listarPausados() {
+    	
+    	 File folder = new File("JogoIniciado\\");
+    	 String dir = "C:\\Workplace\\ProvaJava\\JogoIniciado\\";
+        
+      
+    	    File[] listOfFiles = folder.listFiles();
+
+    	    for (int i = 0; i < listOfFiles.length; i++) {
+    	        if (listOfFiles[i].isFile()) {
+    	            System.out.println("Este é Arquivo " + listOfFiles[i].getName());
+    	            
+    	            	File arquivo =new File(dir,listOfFiles[i].getName());
+    	            	
+    	            	  System.out.println(arquivo.exists());
+    	            
+    	            try(BufferedReader meuBr = new BufferedReader(new FileReader(arquivo))){
+
+    	                String linha ;
+    	                String[] palavra;
+    	                String conteudo = "";
+    	                while ((linha = meuBr.readLine()) != null) {
+    	                    palavra = linha.split("#");
+    	                    for (int j = 0; j < palavra.length; j++) {
+    	                        conteudo = palavra[j];
+    	                    }
+    	                    System.out.println(palavra[0] + "-> " + conteudo);
+    	                }
+
+    	            } catch (FileNotFoundException e) {
+    	                e.printStackTrace();
+    	            } catch (IOException e) {
+    	                e.printStackTrace();
+    	            }
+    	            
+    	            
+    	            
+    	        } else if (listOfFiles[i].isDirectory()) {
+    	            //lista as subpastas
+    	            }
+    	        }
     }
 
 

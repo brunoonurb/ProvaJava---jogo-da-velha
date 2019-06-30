@@ -1,9 +1,0 @@
-nome#bru
-dificuldade#Facil
-resultado#null
-letrasPalpites#[0]
-letrasErradas#[0]
-limiteTentativas#7
-interrupcoes#1
-dataInicio#null
-dataFim#null

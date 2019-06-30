@@ -47,6 +47,7 @@ public class Menu {
 			break;
 		case 1:
 			(new AlterarFile()).RelatorioFinal("Geral");
+			(new AlterarFile()).listarPausados();
 			break;
 		case 2:
 			(new AlterarFile()).RelatorioFinal("Vitoria");

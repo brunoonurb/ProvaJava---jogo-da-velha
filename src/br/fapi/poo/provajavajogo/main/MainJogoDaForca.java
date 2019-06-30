@@ -1,5 +1,6 @@
 package br.fapi.poo.provajavajogo.main;
 
+import br.fapi.poo.provajavajogo.controle.AlterarFile;
 import br.fapi.poo.provajavajogo.controle.ControleGeral;
 import br.fapi.poo.provajavajogo.controle.ControleJogo;
 
@@ -9,5 +10,6 @@ public class MainJogoDaForca {
 
 		ControleGeral.getInstancia().inicio();
 		//ControleJogo.getInstancia().inserirPalavra();
+		//(new AlterarFile()).listarPausados();
 	}
 }
