@@ -48,12 +48,24 @@ public class Menu {
 		case 1:
 			(new AlterarFile()).RelatorioFinal("Geral");
 			(new AlterarFile()).listarPausados();
+			System.out.println("Precione Enter Para Continuar");
+            Leitura.getInstancia().lerString();
+            Leitura.getInstancia().lerString();
+            Menu.getInstancia().menuRelatorio();
 			break;
 		case 2:
 			(new AlterarFile()).RelatorioFinal("Vitoria");
+			System.out.println("Precione Enter Para Continuar");
+            Leitura.getInstancia().lerString();
+            Leitura.getInstancia().lerString();
+            Menu.getInstancia().menuRelatorio();
 			break;
 		case 3:
 			(new AlterarFile()).RelatorioFinal("Derrotas");
+			System.out.println("Precione Enter Para Continuar");
+            Leitura.getInstancia().lerString();
+            Leitura.getInstancia().lerString();
+            Menu.getInstancia().menuRelatorio();
 			break;
 		default:
 			menuRelatorio();

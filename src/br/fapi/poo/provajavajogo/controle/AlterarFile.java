@@ -3,6 +3,7 @@ package br.fapi.poo.provajavajogo.controle;
 
 import br.fapi.poo.provajavajogo.modelo.Jogo;
 import br.fapi.poo.provajavajogo.util.Leitura;
+import br.fapi.poo.provajavajogo.util.Menu;
 
 import javax.swing.*;
 import java.io.*;
@@ -130,14 +131,16 @@ public class AlterarFile {
         dir.mkdir();
 
         if (Jogo.getInstancia().getEstadoDoJogo().equals("Vitoria")){
-
+        	
+        	Jogo.getInstancia().getMyFile().delete();
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioVitorias.txt"));
             adicionarRelatorios();
 
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioGeral.txt"));
             adicionarRelatorios();
         }else if(Jogo.getInstancia().getEstadoDoJogo().equals("Derrota")){
-
+        	
+        	Jogo.getInstancia().getMyFile().delete();
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioDerrotas.txt"));
             adicionarRelatorios();
 
@@ -153,13 +156,11 @@ public class AlterarFile {
 
         if (relatorio.equals("Vitoria")){
         	
-        	Jogo.getInstancia().getMyFile().delete();
-        	
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioVitorias.txt"));
             listarRelarios();
 
         }else if (relatorio.equals("Derrota")){
-        	Jogo.getInstancia().getMyFile().delete();
+        	
             Jogo.getInstancia().setMyFile(new File(dir,"RelatorioDerrotas.txt"));
             listarRelarios();
 
@@ -202,10 +203,12 @@ public class AlterarFile {
             meuBf.write("dataInicio#" + Jogo.getInstancia().getDataInicio());
             meuBf.newLine();
             meuBf.write("dataFim#" + Jogo.getInstancia().getDataFim());
+            meuBf.newLine();
             meuBf.write("----------------------------------");
             meuBf.newLine();
             meuBf.newLine();
             meuBf.flush();
+            meuBf.close();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -225,6 +228,7 @@ public class AlterarFile {
                 }
                 System.out.println(palavra[0] + "-> " + conteudo);
             }
+            
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
